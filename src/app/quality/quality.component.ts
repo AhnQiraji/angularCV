@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { ValuesList } from '../entities/vars/vars'
+import { rowList } from '../entities/vars/vars'
 
 @Component({
   selector: 'quality',
@@ -8,6 +8,8 @@ import { ValuesList } from '../entities/vars/vars'
   styleUrls: ['./quality.component.scss'],
 })
 export class QualityComponent {
-  @Input () listKey!: any;
-  public values = ValuesList;
+  @Input () name!: string;
+  public rowList = rowList;
+  public scale = false;
+  public chosen: any = '';
 }
